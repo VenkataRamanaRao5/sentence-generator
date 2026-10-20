@@ -1,0 +1,20 @@
+lazy val root = project.in(file("."))
+  .enablePlugins(ScalaJSPlugin) // Enable the Scala.js plugin in this project
+  .settings(
+    scalaVersion := "3.5.2",
+    name := "Sentence Generator",
+
+    // Tell Scala.js that this is an application with a main method
+    scalaJSUseMainModuleInitializer := true,
+
+    scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.CommonJSModule) },
+    scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.ESModule) },
+    scalaJSLinkerConfig ~= { _.withSourceMap(true) },
+
+    jsEnv := new org.scalajs.jsenv.jsdomnodejs.JSDOMNodeJSEnv(),
+
+    /* Depend on the scalajs-dom library.
+     * It provides static types for the browser DOM APIs.
+     */
+    libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.8.0",
+  )

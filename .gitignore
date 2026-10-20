@@ -1,0 +1,32 @@
+.cache/
+.vscode/
+.bsp
+
+/src/assets/
+
+# metals
+.metals
+.bloop
+project/**/metals.sbt
+
+# sbt's target directories
+/target/*
+/target/scala-3.5.2/*
+/target/scala-3.5.2/sentence-generator-opt/*
+/project/**/target/
+project/project
+/test/macro-annot/target/
+/test/files/target/
+/test/target/
+/build-sbt/
+local.sbt
+jitwatch.out
+
+dist/
+node_modules/
+.env
+
+!/target/
+!/target/scala-3.5.2/
+!/target/scala-3.5.2/sentence-generator-opt/
+!/target/scala-3.5.2/sentence-generator-opt/main.js

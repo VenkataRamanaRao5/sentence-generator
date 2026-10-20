@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence Generator</title>
+    <style>
+        html, body, #container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        #container {
+            background-image: radial-gradient(rgb(43, 3, 69), rgb(64, 21, 93), rgb(77, 48, 149));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #sentence {
+            color: aliceblue;
+            font-size: xx-large;
+            font-family: 'Chalkduster', fantasy; 
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="sentence"></div>
+    </div>
+    <script type="module" src="target/scala-3.5.2/sentence-generator-opt/main.js"></script>
+</body>
+</html>
